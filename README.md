@@ -246,6 +246,117 @@ Server starts on http://localhost:8000
 ### Step 4: Access Dashboard
 Open browser and navigate to http://localhost:8000
 
+## Web Interface Screenshots
+
+### Main Dashboard
+The main dashboard displays the inflation prediction system with three key sections:
+
+**Left Sidebar - Model Information**
+- Current inflation prediction (4.89% for 2026)
+- Model confidence level
+- Last update timestamp
+- Model performance metrics (RMSE, MAE, R²)
+- Key feature values used in prediction
+
+**Center Panel - Interactive Chart**
+- Historical inflation data (2005-2026)
+- Blue line showing historical inflation rates
+- Orange line showing next year forecast
+- Interactive Plotly chart with hover tooltips
+- Zoom and pan capabilities
+- Download chart as PNG option
+
+To view: Navigate to http://localhost:8000
+
+### Prediction Input Form
+Located on the right sidebar of the dashboard:
+
+**Essential Features Input**
+- GDP Growth (%): Adjustable slider or numeric input
+- Policy Rate (%): Adjustable slider or numeric input
+- Government Debt (% of GDP): Numeric input
+- Government Spending (% of GDP): Numeric input
+- Current Account Balance (% of GDP): Numeric input
+
+**Prediction Button**
+- Click "Predict" to recalculate forecast
+- Chart updates in real-time
+- New prediction line appears instantly
+
+To test:
+1. Go to http://localhost:8000
+2. Adjust any feature value
+3. Click "Predict" button
+4. Observe chart update
+
+### Dashboard Features
+
+**Historical Data Visualization**
+- X-axis: Years (2005-2026)
+- Y-axis: Inflation Rate (%)
+- Data points marked with dots
+- Trend line showing inflation movement
+- Forecast extension showing next year prediction
+
+**Dynamic Updates**
+- Real-time chart refresh on input change
+- No page reload needed
+- Instant model prediction response
+- Visual feedback on prediction change
+
+**Feature Information Tooltips**
+- Hover over each input field for description
+- Shows unit of measurement
+- Displays default value
+- Explains feature importance
+
+### API Response Examples
+
+All predictions return JSON with:
+```json
+{
+  "prediction": 4.89,
+  "model": "ensemble",
+  "confidence": "high",
+  "features_used": {
+    "GDP_Growth": 5.5,
+    "Policy_Rate": 8.0,
+    "Government_Debt_Percent_GDP": 90.0
+  },
+  "timestamp": "2026-04-08T02:17:43"
+}
+```
+
+### How to Capture Screenshots
+
+To document the UI yourself:
+
+1. Start the server:
+```bash
+python api/run_server.py
+```
+
+2. Open http://localhost:8000 in browser
+
+3. For Main Dashboard screenshot:
+- Let page fully load
+- Use browser "Screenshot" tool (Print Screen or F12)
+- Save as `screenshots/dashboard.png`
+
+4. For Prediction Example screenshot:
+- Adjust input fields with different values
+- Click "Predict" button
+- Wait for chart to animate
+- Capture updated dashboard
+- Save as `screenshots/prediction.png`
+
+5. For Mobile/Responsive view:
+- Press F12 for Developer Tools
+- Click device toggle (mobile, tablet)
+- Adjust viewport size
+- Capture response design
+- Save as `screenshots/mobile.png`
+
 ## API Endpoints
 
 ### Health Check
