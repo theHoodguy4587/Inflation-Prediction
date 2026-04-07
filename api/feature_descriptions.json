@@ -1,0 +1,844 @@
+{
+  "feature_descriptions": {
+    "Inflation_Rate": {
+      "friendly_name": "Inflation Rate",
+      "description": "General increase of prices and fall of purchasing value",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": true
+    },
+    "Policy_Rate": {
+      "friendly_name": "Policy Rate",
+      "description": "Central bank interest rate for controlling money supply",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": true
+    },
+    "Current_Account_Percent_GDP": {
+      "friendly_name": "Current Account Percent GDP",
+      "description": "Current account balance as percentage of GDP",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth": {
+      "friendly_name": "GDP Growth",
+      "description": "Year-over-year percentage change in GDP",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": true
+    },
+    "Government_Debt_Percent_GDP": {
+      "friendly_name": "Government Debt Percent GDP",
+      "description": "Total government debt as percentage of GDP",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP": {
+      "friendly_name": "Government Spending Percent GDP",
+      "description": "Government spending as percentage of GDP",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": true
+    },
+    "Trade_Balance": {
+      "friendly_name": "Trade Balance",
+      "description": "Difference between exports and imports",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": true
+    },
+    "Inflation_Rate_lag1": {
+      "friendly_name": "Inflation Rate lag1",
+      "description": "Inflation_Rate from 1 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_lag3": {
+      "friendly_name": "Inflation Rate lag3",
+      "description": "Inflation_Rate from 3 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_lag6": {
+      "friendly_name": "Inflation Rate lag6",
+      "description": "Inflation_Rate from 6 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_lag12": {
+      "friendly_name": "Inflation Rate lag12",
+      "description": "Inflation_Rate from 12 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_lag1": {
+      "friendly_name": "Policy Rate lag1",
+      "description": "Policy_Rate from 1 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_lag3": {
+      "friendly_name": "Policy Rate lag3",
+      "description": "Policy_Rate from 3 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_lag6": {
+      "friendly_name": "Policy Rate lag6",
+      "description": "Policy_Rate from 6 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_lag12": {
+      "friendly_name": "Policy Rate lag12",
+      "description": "Policy_Rate from 12 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_lag1": {
+      "friendly_name": "Current Account Percent GDP lag1",
+      "description": "Current_Account_Percent_GDP from 1 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_lag3": {
+      "friendly_name": "Current Account Percent GDP lag3",
+      "description": "Current_Account_Percent_GDP from 3 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_lag6": {
+      "friendly_name": "Current Account Percent GDP lag6",
+      "description": "Current_Account_Percent_GDP from 6 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_lag12": {
+      "friendly_name": "Current Account Percent GDP lag12",
+      "description": "Current_Account_Percent_GDP from 12 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_lag1": {
+      "friendly_name": "GDP Growth lag1",
+      "description": "GDP_Growth from 1 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_lag3": {
+      "friendly_name": "GDP Growth lag3",
+      "description": "GDP_Growth from 3 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_lag6": {
+      "friendly_name": "GDP Growth lag6",
+      "description": "GDP_Growth from 6 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_lag12": {
+      "friendly_name": "GDP Growth lag12",
+      "description": "GDP_Growth from 12 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_lag1": {
+      "friendly_name": "Government Debt Percent GDP lag1",
+      "description": "Government_Debt_Percent_GDP from 1 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_lag3": {
+      "friendly_name": "Government Debt Percent GDP lag3",
+      "description": "Government_Debt_Percent_GDP from 3 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_lag6": {
+      "friendly_name": "Government Debt Percent GDP lag6",
+      "description": "Government_Debt_Percent_GDP from 6 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_lag12": {
+      "friendly_name": "Government Debt Percent GDP lag12",
+      "description": "Government_Debt_Percent_GDP from 12 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_lag1": {
+      "friendly_name": "Government Spending Percent GDP lag1",
+      "description": "Government_Spending_Percent_GDP from 1 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_lag3": {
+      "friendly_name": "Government Spending Percent GDP lag3",
+      "description": "Government_Spending_Percent_GDP from 3 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_lag6": {
+      "friendly_name": "Government Spending Percent GDP lag6",
+      "description": "Government_Spending_Percent_GDP from 6 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_lag12": {
+      "friendly_name": "Government Spending Percent GDP lag12",
+      "description": "Government_Spending_Percent_GDP from 12 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_lag1": {
+      "friendly_name": "Trade Balance lag1",
+      "description": "Trade_Balance from 1 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_lag3": {
+      "friendly_name": "Trade Balance lag3",
+      "description": "Trade_Balance from 3 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_lag6": {
+      "friendly_name": "Trade Balance lag6",
+      "description": "Trade_Balance from 6 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_lag12": {
+      "friendly_name": "Trade Balance lag12",
+      "description": "Trade_Balance from 12 periods ago",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_ma3": {
+      "friendly_name": "Inflation Rate ma3",
+      "description": "Inflation_Rate moving average over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_ma6": {
+      "friendly_name": "Inflation Rate ma6",
+      "description": "Inflation_Rate moving average over 6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_ma12": {
+      "friendly_name": "Inflation Rate ma12",
+      "description": "Inflation_Rate moving average over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_ma3": {
+      "friendly_name": "Policy Rate ma3",
+      "description": "Policy_Rate moving average over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_ma6": {
+      "friendly_name": "Policy Rate ma6",
+      "description": "Policy_Rate moving average over 6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_ma12": {
+      "friendly_name": "Policy Rate ma12",
+      "description": "Policy_Rate moving average over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_ma3": {
+      "friendly_name": "Current Account Percent GDP ma3",
+      "description": "Current_Account_Percent_GDP moving average over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_ma6": {
+      "friendly_name": "Current Account Percent GDP ma6",
+      "description": "Current_Account_Percent_GDP moving average over 6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_ma12": {
+      "friendly_name": "Current Account Percent GDP ma12",
+      "description": "Current_Account_Percent_GDP moving average over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_ma3": {
+      "friendly_name": "GDP Growth ma3",
+      "description": "GDP_Growth moving average over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_ma6": {
+      "friendly_name": "GDP Growth ma6",
+      "description": "GDP_Growth moving average over 6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_ma12": {
+      "friendly_name": "GDP Growth ma12",
+      "description": "GDP_Growth moving average over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_ma3": {
+      "friendly_name": "Government Debt Percent GDP ma3",
+      "description": "Government_Debt_Percent_GDP moving average over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_ma6": {
+      "friendly_name": "Government Debt Percent GDP ma6",
+      "description": "Government_Debt_Percent_GDP moving average over 6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_ma12": {
+      "friendly_name": "Government Debt Percent GDP ma12",
+      "description": "Government_Debt_Percent_GDP moving average over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_ma3": {
+      "friendly_name": "Government Spending Percent GDP ma3",
+      "description": "Government_Spending_Percent_GDP moving average over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_ma6": {
+      "friendly_name": "Government Spending Percent GDP ma6",
+      "description": "Government_Spending_Percent_GDP moving average over 6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_ma12": {
+      "friendly_name": "Government Spending Percent GDP ma12",
+      "description": "Government_Spending_Percent_GDP moving average over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_ma3": {
+      "friendly_name": "Trade Balance ma3",
+      "description": "Trade_Balance moving average over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_ma6": {
+      "friendly_name": "Trade Balance ma6",
+      "description": "Trade_Balance moving average over 6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_ma12": {
+      "friendly_name": "Trade Balance ma12",
+      "description": "Trade_Balance moving average over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_std6": {
+      "friendly_name": "Inflation Rate std6",
+      "description": "Inflation_Rate volatility over Inflation_Rate_std6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_std12": {
+      "friendly_name": "Inflation Rate std12",
+      "description": "Inflation_Rate volatility over Inflation_Rate_std12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_std6": {
+      "friendly_name": "Policy Rate std6",
+      "description": "Policy_Rate volatility over Policy_Rate_std6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_std12": {
+      "friendly_name": "Policy Rate std12",
+      "description": "Policy_Rate volatility over Policy_Rate_std12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_std6": {
+      "friendly_name": "Current Account Percent GDP std6",
+      "description": "Current_Account_Percent_GDP volatility over Current_Account_Percent_GDP_std6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_std12": {
+      "friendly_name": "Current Account Percent GDP std12",
+      "description": "Current_Account_Percent_GDP volatility over Current_Account_Percent_GDP_std12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_std6": {
+      "friendly_name": "GDP Growth std6",
+      "description": "GDP_Growth volatility over GDP_Growth_std6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_std12": {
+      "friendly_name": "GDP Growth std12",
+      "description": "GDP_Growth volatility over GDP_Growth_std12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_std6": {
+      "friendly_name": "Government Debt Percent GDP std6",
+      "description": "Government_Debt_Percent_GDP volatility over Government_Debt_Percent_GDP_std6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_std12": {
+      "friendly_name": "Government Debt Percent GDP std12",
+      "description": "Government_Debt_Percent_GDP volatility over Government_Debt_Percent_GDP_std12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_std6": {
+      "friendly_name": "Government Spending Percent GDP std6",
+      "description": "Government_Spending_Percent_GDP volatility over Government_Spending_Percent_GDP_std6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_std12": {
+      "friendly_name": "Government Spending Percent GDP std12",
+      "description": "Government_Spending_Percent_GDP volatility over Government_Spending_Percent_GDP_std12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_std6": {
+      "friendly_name": "Trade Balance std6",
+      "description": "Trade_Balance volatility over Trade_Balance_std6 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_std12": {
+      "friendly_name": "Trade Balance std12",
+      "description": "Trade_Balance volatility over Trade_Balance_std12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_pct_change_1": {
+      "friendly_name": "Inflation Rate pct change 1",
+      "description": "Inflation_Rate percent change over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_pct_change_3": {
+      "friendly_name": "Inflation Rate pct change 3",
+      "description": "Inflation_Rate percent change over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_pct_change_12": {
+      "friendly_name": "Inflation Rate pct change 12",
+      "description": "Inflation_Rate percent change over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_pct_change_1": {
+      "friendly_name": "Policy Rate pct change 1",
+      "description": "Policy_Rate percent change over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_pct_change_3": {
+      "friendly_name": "Policy Rate pct change 3",
+      "description": "Policy_Rate percent change over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_pct_change_12": {
+      "friendly_name": "Policy Rate pct change 12",
+      "description": "Policy_Rate percent change over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_pct_change_1": {
+      "friendly_name": "Current Account Percent GDP pct change 1",
+      "description": "Current_Account_Percent_GDP percent change over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_pct_change_3": {
+      "friendly_name": "Current Account Percent GDP pct change 3",
+      "description": "Current_Account_Percent_GDP percent change over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_pct_change_12": {
+      "friendly_name": "Current Account Percent GDP pct change 12",
+      "description": "Current_Account_Percent_GDP percent change over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_pct_change_1": {
+      "friendly_name": "GDP Growth pct change 1",
+      "description": "GDP_Growth percent change over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_pct_change_3": {
+      "friendly_name": "GDP Growth pct change 3",
+      "description": "GDP_Growth percent change over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_pct_change_12": {
+      "friendly_name": "GDP Growth pct change 12",
+      "description": "GDP_Growth percent change over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_pct_change_1": {
+      "friendly_name": "Government Debt Percent GDP pct change 1",
+      "description": "Government_Debt_Percent_GDP percent change over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_pct_change_3": {
+      "friendly_name": "Government Debt Percent GDP pct change 3",
+      "description": "Government_Debt_Percent_GDP percent change over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_pct_change_12": {
+      "friendly_name": "Government Debt Percent GDP pct change 12",
+      "description": "Government_Debt_Percent_GDP percent change over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_pct_change_1": {
+      "friendly_name": "Government Spending Percent GDP pct change 1",
+      "description": "Government_Spending_Percent_GDP percent change over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_pct_change_3": {
+      "friendly_name": "Government Spending Percent GDP pct change 3",
+      "description": "Government_Spending_Percent_GDP percent change over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_pct_change_12": {
+      "friendly_name": "Government Spending Percent GDP pct change 12",
+      "description": "Government_Spending_Percent_GDP percent change over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_pct_change_1": {
+      "friendly_name": "Trade Balance pct change 1",
+      "description": "Trade_Balance percent change over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_pct_change_3": {
+      "friendly_name": "Trade Balance pct change 3",
+      "description": "Trade_Balance percent change over 3 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_pct_change_12": {
+      "friendly_name": "Trade Balance pct change 12",
+      "description": "Trade_Balance percent change over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_diff_1": {
+      "friendly_name": "Inflation Rate diff 1",
+      "description": "Inflation_Rate difference over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Inflation_Rate_diff_12": {
+      "friendly_name": "Inflation Rate diff 12",
+      "description": "Inflation_Rate difference over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_diff_1": {
+      "friendly_name": "Policy Rate diff 1",
+      "description": "Policy_Rate difference over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Policy_Rate_diff_12": {
+      "friendly_name": "Policy Rate diff 12",
+      "description": "Policy_Rate difference over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_diff_1": {
+      "friendly_name": "Current Account Percent GDP diff 1",
+      "description": "Current_Account_Percent_GDP difference over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Current_Account_Percent_GDP_diff_12": {
+      "friendly_name": "Current Account Percent GDP diff 12",
+      "description": "Current_Account_Percent_GDP difference over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_diff_1": {
+      "friendly_name": "GDP Growth diff 1",
+      "description": "GDP_Growth difference over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "GDP_Growth_diff_12": {
+      "friendly_name": "GDP Growth diff 12",
+      "description": "GDP_Growth difference over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_diff_1": {
+      "friendly_name": "Government Debt Percent GDP diff 1",
+      "description": "Government_Debt_Percent_GDP difference over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Debt_Percent_GDP_diff_12": {
+      "friendly_name": "Government Debt Percent GDP diff 12",
+      "description": "Government_Debt_Percent_GDP difference over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_diff_1": {
+      "friendly_name": "Government Spending Percent GDP diff 1",
+      "description": "Government_Spending_Percent_GDP difference over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Government_Spending_Percent_GDP_diff_12": {
+      "friendly_name": "Government Spending Percent GDP diff 12",
+      "description": "Government_Spending_Percent_GDP difference over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_diff_1": {
+      "friendly_name": "Trade Balance diff 1",
+      "description": "Trade_Balance difference over 1 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    },
+    "Trade_Balance_diff_12": {
+      "friendly_name": "Trade Balance diff 12",
+      "description": "Trade_Balance difference over 12 periods",
+      "unit": "%",
+      "category": "Economic Indicator",
+      "default": 0.0,
+      "essential": false
+    }
+  }
+}
