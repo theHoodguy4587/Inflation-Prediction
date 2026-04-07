@@ -251,111 +251,208 @@ Open browser and navigate to http://localhost:8000
 ### Main Dashboard
 The main dashboard displays the inflation prediction system with three key sections:
 
+**Layout Overview:**
+```
+┌────────────────────────────────────────────────────────────────────────────┐
+│ Sri Lanka Inflation Prediction System                                      │
+├──────────────┬──────────────────────────────────────┬──────────────────────┤
+│   Model      │                                      │   Input Features     │
+│   Metrics    │    Inflation Rate Chart              │   & Prediction       │
+│              │    (Historical + Forecast)           │                      │
+│              │                                      │   - GDP Growth       │
+│   - 4.89%    │    [Blue line: Past data]            │   - Policy Rate      │
+│   - Confidence│    [Orange line: Future forecast]   │   - Gov Debt         │
+│   - RMSE     │                                      │   - Gov Spending     │
+│   - MAE      │    Years: 2005-2027                  │   - Current Account  │
+│   - R²       │    Inflation Rate: 0-8%              │                      │
+│              │                                      │   [PREDICT button]   │
+└──────────────┴──────────────────────────────────────┴──────────────────────┘
+```
+
 **Left Sidebar - Model Information**
-- Current inflation prediction (4.89% for 2026)
-- Model confidence level
-- Last update timestamp
-- Model performance metrics (RMSE, MAE, R²)
+- Current inflation prediction: 4.89% for 2026
+- Model confidence level: High
+- Performance metrics (RMSE, MAE, R² Score)
 - Key feature values used in prediction
+- Model type: Ensemble (XGBoost + Random Forest)
 
 **Center Panel - Interactive Chart**
-- Historical inflation data (2005-2026)
-- Blue line showing historical inflation rates
-- Orange line showing next year forecast
-- Interactive Plotly chart with hover tooltips
-- Zoom and pan capabilities
-- Download chart as PNG option
+- Historical inflation data: 2005-2024 (blue line)
+- Next year forecast: 2025-2026 (orange line)
+- Features: Plotly interactive chart with hover tooltips
+- Capabilities: Zoom, pan, download as PNG
+- Y-axis: Inflation Rate (0-8%)
+- X-axis: Years (2005-2027)
 
-To view: Navigate to http://localhost:8000
+**Right Sidebar - Prediction Input Form**
+- GDP Growth (%): Input field for growth rate
+- Policy Rate (%): Input field for CBSL policy rate
+- Government Debt (% of GDP): Input field for debt ratio
+- Government Spending (% of GDP): Input field for spending ratio
+- Current Account Balance (% of GDP): Input field for account balance
+- Predict Button: Blue button to recalculate forecast
+- Status Display: Shows model readiness and last update time
 
-### Prediction Input Form
-Located on the right sidebar of the dashboard:
-
-**Essential Features Input**
-- GDP Growth (%): Adjustable slider or numeric input
-- Policy Rate (%): Adjustable slider or numeric input
-- Government Debt (% of GDP): Numeric input
-- Government Spending (% of GDP): Numeric input
-- Current Account Balance (% of GDP): Numeric input
-
-**Prediction Button**
-- Click "Predict" to recalculate forecast
-- Chart updates in real-time
-- New prediction line appears instantly
-
-To test:
-1. Go to http://localhost:8000
-2. Adjust any feature value
-3. Click "Predict" button
-4. Observe chart update
+Visual mockup in `screenshots/dashboard_mockup.png`
 
 ### Dashboard Features
 
 **Historical Data Visualization**
-- X-axis: Years (2005-2026)
-- Y-axis: Inflation Rate (%)
-- Data points marked with dots
-- Trend line showing inflation movement
-- Forecast extension showing next year prediction
+- X-axis: Years from 2005 to 2027
+- Y-axis: Inflation Rate percentage (0-8%)
+- Historical data points: Actual inflation values 2005-2024
+- Blue line: Connects historical observations
+- Forecast line: Orange line extending from 2025-2027
+- Interactive tooltips: Hover over points for exact values
+- Downloadable: Right-click to save chart as image
 
 **Dynamic Updates**
-- Real-time chart refresh on input change
-- No page reload needed
-- Instant model prediction response
-- Visual feedback on prediction change
+- Real-time chart refresh when input changes
+- No page reload required
+- Instant model prediction execution
+- Smooth line animation on update
+- Status indicator shows processing state
 
-**Feature Information Tooltips**
-- Hover over each input field for description
-- Shows unit of measurement
-- Displays default value
-- Explains feature importance
+**Feature Input Controls**
+- Numeric input fields for precise values
+- Dynamic ranges based on historical min/max
+- Default values pre-populated from latest data
+- Slider alternative for easier adjustment
+- Input validation on client side
+- Feature descriptions on hover
 
-### API Response Examples
+### API Response Example
 
-All predictions return JSON with:
+All predictions return JSON format:
 ```json
 {
   "prediction": 4.89,
   "model": "ensemble",
   "confidence": "high",
+  "rmse": 2.24,
+  "mae": 2.02,
+  "r2_score": 0.71,
   "features_used": {
     "GDP_Growth": 5.5,
     "Policy_Rate": 8.0,
-    "Government_Debt_Percent_GDP": 90.0
+    "Government_Debt_Percent_GDP": 90.0,
+    "Government_Spending_Percent_GDP": 20.5,
+    "Current_Account_Percent_GDP": -5.0
   },
-  "timestamp": "2026-04-08T02:17:43"
+  "prediction_timestamp": "2026-04-08T02:17:43",
+  "model_trained_date": "2026-04-08"
 }
 ```
+
+### How to Access and Use Dashboard
+
+**Step 1: Start Server**
+```bash
+python api/run_server.py
+```
+Output: `Uvicorn running on http://127.0.0.1:8000`
+
+**Step 2: Open Dashboard**
+- Open web browser
+- Navigate to http://localhost:8000
+- Dashboard loads with current forecast
+
+**Step 3: View Current Prediction**
+- Left sidebar shows latest model prediction
+- Chart displays historical data and forecast
+- Model confidence level displayed
+
+**Step 4: Make Custom Prediction**
+- Right sidebar shows input form
+- Modify any feature value
+- Click "PREDICT" button
+- Chart updates with new forecast
+- Confidence level updates
+
+**Step 5: Experiment with Scenarios**
+- Try "high growth" scenario: GDP_Growth = 8%
+- Try "interest rate cut" scenario: Policy_Rate = 6%
+- Try "debt reduction" scenario: Government_Debt = 80%
+- Observe how predictions change
+
+### Responsive Design
+
+The dashboard works on multiple screen sizes:
+
+**Desktop (1200px+)**
+- Three-column layout
+- Left sidebar: Model info
+- Center: Large chart
+- Right sidebar: Input form
+- All elements visible simultaneously
+
+**Tablet (800-1200px)**
+- Sidebar collapses to icons
+- Chart takes most space
+- Input form slides below
+- Touch-friendly buttons
+
+**Mobile (<800px)**
+- Stacked layout (vertical)
+- Model info at top
+- Chart in middle
+- Input form at bottom
+- Responsive font sizing
 
 ### How to Capture Screenshots
 
 To document the UI yourself:
 
-1. Start the server:
+**Step 1: Start Server**
 ```bash
 python api/run_server.py
 ```
 
-2. Open http://localhost:8000 in browser
+**Step 2: Open Dashboard**
+- Navigate to http://localhost:8000
+- Wait for full page load (2-3 seconds)
 
-3. For Main Dashboard screenshot:
-- Let page fully load
-- Use browser "Screenshot" tool (Print Screen or F12)
-- Save as `screenshots/dashboard.png`
+**Step 3: Capture Default View**
+- Screenshot URL: http://localhost:8000
+- Save as: `screenshots/dashboard_default.png`
+- Shows default prediction and layouts
 
-4. For Prediction Example screenshot:
-- Adjust input fields with different values
-- Click "Predict" button
-- Wait for chart to animate
-- Capture updated dashboard
-- Save as `screenshots/prediction.png`
+**Step 4: Custom Prediction Screenshot**
+- Click input fields on right sidebar
+- Change GDP_Growth to 7.5
+- Change Policy_Rate to 6.5
+- Click "PREDICT" button
+- Wait for chart to update
+- Screenshot updated dashboard
+- Save as: `screenshots/dashboard_prediction.png`
 
-5. For Mobile/Responsive view:
-- Press F12 for Developer Tools
-- Click device toggle (mobile, tablet)
-- Adjust viewport size
-- Capture response design
-- Save as `screenshots/mobile.png`
+**Step 5: Chart Focus Screenshot**
+- Use browser zoom (Ctrl +) to enlarge
+- Focus on center chart area
+- Screenshot showing forecast line
+- Save as: `screenshots/chart_forecast.png`
+
+**Step 6: Mobile View (Optional)**
+- Open Developer Tools (F12)
+- Click device toggle (mobile icon)
+- Select iPhone 12 or Android device
+- Adjust viewport
+- Screenshot responsive layout
+- Save as: `screenshots/mobile_view.png`
+
+### Browser Tools
+
+**Built-in Browser Features:**
+- F12: Open Developer Tools
+- Ctrl+Print Screen: Capture screen
+- Print -> Save as PDF: Save dashboard
+- Right-click -> Screenshot: Take region screenshot
+
+**Alternative Tools:**
+- Lightshot (cross-platform screenshot tool)
+- Snagit (advanced annotation)
+- ShareX (free, powerful)
+- Windows Snipping Tool (built-in)
 
 ## API Endpoints
 
