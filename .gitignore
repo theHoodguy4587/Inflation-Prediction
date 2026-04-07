@@ -11,10 +11,7 @@ ENV/
 dist/
 build/
 
-# Data
-data/raw/*.csv
-data/processed/*.pkl
-data/processed/*.csv
+# Logs only
 logs/
 *.log
 
